@@ -1,0 +1,159 @@
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Marco Vidonis.com</title>
+    <link rel="stylesheet" href="portfolio.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <style>
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(window).scroll(function() {
+        var pagePosition = document.documentElement.scrollTop || document.body.scrollTop;
+        console.log(pagePosition);
+        if (pagePosition > 500) {
+          showUpArrow();
+        } else {
+          hideUpArrow();
+        }
+      });
+
+      function pageScroll(idTag) {
+        document.querySelector(idTag).scrollIntoView({
+          behavior: 'smooth'
+        });
+        showUpArrow();
+      }
+
+      function pageScrollToTop() {
+        window.scroll({
+          top: 0,
+          left: 0,
+          behavior: 'smooth'
+        });
+        hideUpArrow();
+      }
+
+      function showUpArrow() {
+        var upButton = document.getElementById("arrow-up");
+        upButton.style.opacity = "0.7";
+        upButton.style.transition = "1s ease 1s";
+      }
+
+      function hideUpArrow() {
+        var upButton = document.getElementById("arrow-up");
+        upButton.style.opacity = "0";
+        upButton.style.transition = "1s ease 1s";
+      }
+
+    </script>
+
+  </head>
+
+  <body>
+
+    <header>
+      <!-- <div class="site-title">MARCO VIDONIS</div> -->
+      <a href="javascript:pageScroll('#about-me')">About Me</a>
+      <a href="javascript:pageScroll('#my-projects')">Projects</a>
+      <a href="javascript:pageScroll('#my-tools')">Tools</a>
+    </header>
+
+    <div class="my-grid-container">
+      <div class="my-name"><h1>Hi, I'm Marco!</h1></div>
+      <div class="main-image">
+        <img class="main-image" src="img/marco_wide.png">
+        <div class="subtitle">Front-End Web Developer</div>
+      </div>
+      <div class="section-title" id="about-me"><h1>About Me</h1></div>
+      <div class="section-content">
+        <p>Chemical Engineer with a passion for coding, working out and good food.<br>
+          I'm learning Web Development through <a class="fcc-link" href="https://www.freecodecamp.org/" target="_blank">freeCodeCamp <i class="fab fa-free-code-camp"></i></a>.</p>
+      </div>
+      <div class="my-projects-title projects" id="my-projects"><h1>My Projects</h1></div>
+      <!-- <div class="section-content projects">
+        <p>Here's a list of my past and current projects:</p>
+      </div> -->
+      <div class="projects-grid">
+        <a class="card" href="https://punkrockwedding.github.io/tourdates/" target="_blank">
+          <img class="thumbnail"
+          src="img/prw.png"
+          alt="Screenshot of my PunkRock Wedding page.">
+          <span class="card-description">
+            Wedding page with Instagram viewer
+            <br>
+            <p>This is the website I made for my sister's wedding. The main page lists their honeymoon destinations: Each place has a card showing a picture (some of which I took myself!) and a brief description on mouse hover... very much like this one.</p>
+            <br>
+            <p>The Instagram page is a web scraper that shows the user a live feed of all the pictures posted on Instagram with the wedding's hashtag, #GinZano2018. This way, all guests could contribute to the day's photobook and see it in real time.</p>
+            <br>
+            <p>Tools: CSS Grid, jQuery, Google Analytics.</p>
+          </span>
+        </a>
+        <a class="card" href="https://marcovidonis.github.io/randomQuotesViewer/" target="_blank">
+          <img class="thumbnail"
+          src="img/random_quotes.png"
+          alt="Screenshot of my Random Quotes Viewer page.">
+          <span class="card-description">
+            Random Famous Quotes Viewer
+            <br>
+            <p>One of the many freeCodeCamp's Front End projects. I used a free API (thanks to Tadas Talaikis) that serves a random quote and its author at each call.</p>
+            <br>
+            <p>I experimented with API calls, Twitter's share button and fonts selection (Roboto, by the way).</p>
+            <br>
+            <p>Tools: CSS Grid, jQuery.</p>
+          </span>
+        </a>
+        <a class="card" href="https://codepen.io/marcovidonis/full/brRBNY/" target="_blank">
+          <img class="thumbnail"
+          src="http://s.newsweek.com/sites/www.newsweek.com/files/styles/feature/public/2014/12/31/0109fe0201wallace01.jpg"
+          alt="David Foster Wallace Tribute Page.">
+          <span class="card-description">David Foster Wallace Tribute Page</span>
+        </a>
+      </div>
+      <div class="section-title" id="my-tools"><h1>My Tools</h1></div>
+      <div class="section-content tools">
+        <ul class="html">
+          <li><i class="fab fa-html5"></i></li>
+        </ul>
+        <ul class="css">
+          <li><i class="fab fa-css3-alt"></i></li>
+          <li><p>Flexbox</p></li>
+          <li><p>Grid</p></li>
+        </ul>
+        <ul class="js">
+          <li><i class="fab fa-js-square"></i></li>
+          <li><p>jQuery</p></li>
+        </ul>
+        <ul class="analytics">
+          <li><img src="img/Google-Analytics-01/Google-Analytics-01.png"</li>
+          <li><p>Google Analytics</p></li>
+        </ul>
+        <ul class="fontawesome">
+          <li><i class="fab fa-font-awesome"></i>
+          <li><p>Font Awesome</p></li>
+        </ul>
+
+      </div>
+
+
+    </div>
+    <footer>Made by Marco Vidonis, 2018 &nbsp -
+      &nbsp <a href="https://github.com/marcovidonis" target="_none"><i class="fab fa-github"></i></a>
+      &nbsp &nbsp <a href="https://twitter.com/marcovidonis" target="_none"><i class="fab fa-twitter"></i></a>
+      &nbsp &nbsp <a href="https://www.freecodecamp.org/marcovidonis" target="_none"><i class="fab fa-free-code-camp"></i></a>
+    </footer>
+
+    <a id="arrow-up" href="javascript:pageScrollToTop()"><i class="fas fa-angle-up"></i></a>
+  </body>
+
+<!--
+Photo by Elena Ferrer on Unsplash
+Photo by Raúl Nájera  on Unsplash
+Photo by Tim Mossholder on Unsplash
+-->
+
+</html>
