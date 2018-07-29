@@ -14,7 +14,13 @@
     <script>
       $(window).scroll(function() {
         var pagePosition = document.documentElement.scrollTop || document.body.scrollTop;
-        console.log(pagePosition);
+        // console.log(pagePosition);
+        if (pagePosition > 5) {
+          showNavbarShadow();
+        } else {
+          hideNavbarShadow();
+        }
+
         if (pagePosition > 500) {
           showUpArrow();
         } else {
@@ -24,7 +30,8 @@
 
       function pageScroll(idTag) {
         document.querySelector(idTag).scrollIntoView({
-          behavior: 'smooth'
+          behavior: 'smooth',
+          block: 'start'
         });
         showUpArrow();
       }
@@ -36,6 +43,18 @@
           behavior: 'smooth'
         });
         hideUpArrow();
+      }
+
+      function showNavbarShadow() {
+        var navbar = document.getElementById("top-nav");
+        navbar.style.boxShadow = "0px 3px 10px #111";
+        navbar.style.transition = "0.5s ease";
+      }
+
+      function hideNavbarShadow() {
+        var navbar = document.getElementById("top-nav");
+        navbar.style.boxShadow = "none";
+        navbar.style.transition = "0.5s ease";
       }
 
       function showUpArrow() {
@@ -56,12 +75,12 @@
 
   <body>
 
-    <header>
+    <nav id="top-nav">
       <!-- <div class="site-title">MARCO VIDONIS</div> -->
       <a href="javascript:pageScroll('#about-me')">About Me</a>
       <a href="javascript:pageScroll('#my-projects')">Projects</a>
       <a href="javascript:pageScroll('#my-tools')">Tools</a>
-    </header>
+    </nav>
 
     <div class="my-grid-container">
       <div class="my-name"><h1>Hi, I'm Marco!</h1></div>

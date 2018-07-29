@@ -2,6 +2,7 @@ body{
   margin: 0px;
   background-color: #EEE;
   font-family: sans-serif;
+  position: relative;
 }
 
 h1{
@@ -36,7 +37,7 @@ a {
   align-items: center;
 }
 
-header{
+nav{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -44,9 +45,13 @@ header{
   color: #EEE;
   font-size: 1em;
   align-items: stretch;
+  z-index: 99;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
-header > * {
+nav > * {
   flex: 1;
   text-align: center;
   padding: 10px;
@@ -54,7 +59,7 @@ header > * {
   transition: color: 0.5s;
 }
 
-header a:hover {
+nav a:hover {
   background-color: #EEE;
   color: #333;
 }
@@ -278,9 +283,10 @@ footer a {
 }
 
 @media (min-width: 900px) {
-  header{
+  nav{
     flex-direction: row;
     font-size: 1.5em;
+    position: fixed;
   }
 
   .site-title{
@@ -291,8 +297,7 @@ footer a {
   .my-name{
     grid-column: 1 / -1;
     background: none;
-    /* padding-top: 30px;
-    padding-bottom: 30px; */
+    margin-top: 50px;
     font-size: 3em;
   }
 
