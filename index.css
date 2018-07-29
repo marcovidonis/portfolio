@@ -206,6 +206,7 @@ nav a:hover {
   text-align: center;
   font-size: 1.5em;
   font-family: sans-serif;
+  overflow-x: scroll;
 }
 
 .tools i {
@@ -223,14 +224,16 @@ nav a:hover {
   border-left: 1px solid #d1d3d6;
 }
 
+.tools > ul li + li {
+  opacity: 0;
+}
+
 ul[class=html] {
   color: #f78c00;
 }
 
 ul[class=css] {
   color: #008ef4;
-  /* border-left: 1px solid #d1d3d6;
-  border-right: 1px solid #d1d3d6; */
 }
 
 ul[class=js] {
@@ -243,6 +246,11 @@ ul[class=analytics] {
 
 ul[class=fontawesome] {
   color: #2B98F3;
+}
+
+.tools ul:hover li + li {
+  opacity: 1;
+  transition: opacity 0.5s;
 }
 
 .analytics img {
