@@ -201,7 +201,7 @@ nav a:hover {
 }
 
 .tools {
-  justify-content: space-evenly;
+  justify-content: center;
   align-items: baseline;
   text-align: center;
   font-size: 1.5em;
@@ -213,49 +213,57 @@ nav a:hover {
   font-size: 90px;
 }
 
-.tools > ul {
-  list-style-type: none;
-  padding-left: 0;
+.one-tool {
   flex: 1;
-  align-self: stretch;
+  height: 300px;
+  position: relative;
 }
 
-.tools > ul + ul {
+.one-tool > span:first-child {
+  position: absolute;
+  top: 105px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.tools > div + div {
   border-left: 1px solid #d1d3d6;
 }
 
-.tools > ul li + li {
+.one-tool span + span {
   opacity: 0;
 }
 
-ul[class=html] {
+.tools > .html {
   color: #f78c00;
 }
 
-ul[class=css] {
+.tools > .css {
   color: #008ef4;
 }
 
-ul[class=js] {
+.tools > .js {
   color: #ddd018;
 }
 
-ul[class=analytics] {
+.tools .analytics {
   color: #F68511;
 }
 
-ul[class=fontawesome] {
+.tools > .fontawesome {
   color: #2B98F3;
 }
 
-.tools ul:hover li + li {
+.one-tool:hover span + span {
   opacity: 1;
   transition: opacity 0.5s;
 }
 
 .analytics img {
-  height: 90px;
-  width: 90px;
+  height: 80px;
+  width: 80px;
   object-fit: scale-down;
 }
 
