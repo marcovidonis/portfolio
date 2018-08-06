@@ -222,7 +222,6 @@ nav a:hover {
 }
 
 .one-tool {
-  /* flex: 1; */
   height: 300px;
   position: relative;
   background-color: white;
@@ -235,10 +234,6 @@ nav a:hover {
   right: 0;
   margin-left: auto;
   margin-right: auto;
-}
-
-.tools > div + div {
-  /* border-left: 1px solid #d1d3d6; */
 }
 
 .one-tool span + span {
