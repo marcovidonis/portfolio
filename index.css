@@ -117,6 +117,7 @@ nav a:hover {
 
 .my-projects-title{
   grid-column: 1 / -1;
+  padding-top: 25px;
 }
 
 /* .my-projects-content{
@@ -171,7 +172,8 @@ nav a:hover {
   /* display: flex;
   justify-content: center; */
   text-align: center;
-  background: rgba(0, 0, 0, 0.6);
+  background: rgba(255, 255, 255, 0.6);
+  color: #333;
   width: 100%;
   font-size: 1.2em;
   padding-top: 10px;
