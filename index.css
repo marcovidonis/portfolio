@@ -74,11 +74,10 @@ nav a:hover {
   grid-column: 1 / -1;
   background: none;
   margin-top: 50px;
-  font-size: 3em;
 }
 
 .my-name h1 {
-  font-size: 1.8em;
+  font-size: 85px;
   margin-top: 30px;
   margin-bottom: 30px;
 }
@@ -101,7 +100,7 @@ nav a:hover {
   top: 52%;
   width: 40%;
   justify-content: center;
-  font-size: 4.5em;
+  font-size: 3.7em;
   padding: 10px;
 }
 
@@ -274,7 +273,7 @@ footer {
   background-color: #333;
   color: #EEE;
   font-size: 1.5em;
-  padding: 15px 10px 10px 10px;
+  padding: 15px 10px 50px 10px;
   text-align: center;
   right: 0;
   left: 0;
@@ -310,20 +309,8 @@ footer a {
     font-size: 1em;
   }
 
-  nav{
-    flex-direction: column;
-    font-size: 1em;
-    position: relative;
-  }
-
-  .site-title{
-    border-bottom: 1px solid #EEE;
-    border-right: none;
-  }
-
-  .my-name{
-    margin-top: 0px;
-    font-size: 2em;
+  .my-name h1 {
+    font-size: 65px;
   }
 
   .subtitle{
@@ -339,8 +326,39 @@ footer a {
     padding: 20px 10px;
   }
 
+  .tools {
+    padding: 0;
+  }
+
 }
 
 @media screen and (max-width: 544px) {
 /* mobile responsiveness */
+  nav{
+    flex-direction: column;
+    font-size: 1em;
+    position: relative;
+  }
+
+  .site-title{
+    border-bottom: 1px solid #EEE;
+    border-right: none;
+  }
+
+  .my-name{
+    margin-top: 0px;
+  }
+
+  .my-name h1{
+    font-size: 35px;
+  }
+
+  .subtitle{
+    font-size: 20px;
+    top: 45%;
+    width: 40%;
+  }
+
+
+
 }
