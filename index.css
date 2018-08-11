@@ -126,8 +126,8 @@ nav a:hover {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   background-color: #d1d3d6;
-  grid-gap: 20px;
-  padding: 20px;
+  grid-gap: 50px;
+  padding: 50px;
 }
 
 .projects-grid > * {
@@ -274,13 +274,19 @@ footer {
   background-color: #333;
   color: #EEE;
   font-size: 1.5em;
-  padding: 15px 10px 50px 10px;
+  line-height: 50px;
+  padding: 15px 10px 50px 40px;
   right: 0;
   left: 0;
 }
 
+footer ul {
+  list-style: none;
+  padding-left: 0;
+}
+
 footer a {
-  text-decoration: none;
+  text-decoration: underline;
   color: inherit;
 }
 
@@ -378,9 +384,8 @@ footer a {
     padding: 10px;
   }
 
-  footer {
-    font-size: 0.8em;
+  .projects-grid{
+    grid-gap: 75px;
   }
-
 
 }
