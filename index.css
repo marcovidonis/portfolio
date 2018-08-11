@@ -6,11 +6,11 @@ body{
 }
 
 h1{
-  font-size: 2em;
+  font-size: 3em;
 }
 
 p{
-  font-size: 1em;
+  font-size: 1.5em;
 }
 
 a {
@@ -39,16 +39,16 @@ a {
 
 nav{
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
   background-color: #333;
   color: #EEE;
-  font-size: 1em;
+  font-size: 1.5em;
   align-items: stretch;
   z-index: 99;
   top: 0;
   left: 0;
   right: 0;
+  position: fixed;
 }
 
 nav > * {
@@ -65,13 +65,16 @@ nav a:hover {
 }
 
 .site-title{
-  border-bottom: 1px solid #EEE;
-  border-right: none;
+  border-right: 1px solid #EEE;
+  border-bottom: none;
   background-color: #b50003;
 }
 
 .my-name{
   grid-column: 1 / -1;
+  background: none;
+  margin-top: 50px;
+  font-size: 3em;
 }
 
 .my-name h1 {
@@ -98,17 +101,17 @@ nav a:hover {
   top: 52%;
   width: 40%;
   justify-content: center;
-  font-size: 2em;
+  font-size: 4.5em;
   padding: 10px;
 }
 
 .section-title{
-  grid-column: 1 / -1;
+  grid-column: 1 / 3;
 }
 
 .section-content{
-  grid-column: 1 / -1;
-  padding: 20px 10px;
+  grid-column: 3 / -1;
+  padding: 20px 0px;
 }
 
 .projects {
@@ -119,14 +122,6 @@ nav a:hover {
   grid-column: 1 / -1;
   padding-top: 25px;
 }
-
-/* .my-projects-content{
-  grid-column: 1 / -1;
-  background-color: #55D;
-  color: #EEE;
-  padding-left: 10px;
-  padding-right: 10px;
-} */
 
 .projects-grid{
   grid-column: 1 / -1;
@@ -149,18 +144,9 @@ nav a:hover {
   height: 300px;
   width: 100%;
   object-fit: cover;
+  opacity: 1;
+  transition: opacity 0.6s;
 }
-
-/*.card-image {
-  background-size: cover;
-  height: 100%;
-  width: 100%;
-}*/
-
-/*.card-title {
-  background: rgba(black, 0.3);
-  color: white;
-}*/
 
 .card {
   position: relative;
@@ -169,8 +155,6 @@ nav a:hover {
 .card-description {
   position: absolute;
   align-self: end;
-  /* display: flex;
-  justify-content: center; */
   text-align: center;
   background: rgba(255, 255, 255, 0.6);
   color: #333;
@@ -181,6 +165,7 @@ nav a:hover {
   top: 85%;
   bottom: 0;
   overflow: hidden;
+  transition: top 0.6s;
 }
 
 .card-description p {
@@ -271,7 +256,7 @@ nav a:hover {
   color: #ddd018;
 }
 
-.tools .analytics {
+.tools > .analytics {
   color: #F68511;
 }
 
@@ -316,61 +301,46 @@ footer a {
   text-align: center;
 }
 
-@media (min-width: 900px) {
-  nav{
-    flex-direction: row;
-    font-size: 1.5em;
-    position: fixed;
-  }
-
-  .site-title{
-    border-right: 1px solid #EEE;
-    border-bottom: none;
-  }
-
-  .my-name{
-    grid-column: 1 / -1;
-    background: none;
-    margin-top: 50px;
-    font-size: 3em;
-  }
-
-  .subtitle{
-    grid-column: 1 / 4;
-    background-color: rgba(0, 0, 0, 0.7);
-    font-size: 4.5em;
-  }
-
-  .section-title{
-    grid-column: 1 / 3;
-  }
-
-  .section-content{
-    grid-column: 3 / -1;
-    padding-left: 0px;
-    padding-right: 0px;
-  }
-
-  /* .my-projects-title{
-    grid-column: 1 / 3;
-    grid-row: span 2;
-  }
-
-  .my-projects-content{
-    grid-column: 3 / -1;
-    padding-left: 0px;
-    padding-right: 0px;
-  } */
-
-  /* .projects-grid{
-    grid-column: 3 / -1;
-  } */
-
+@media screen and (max-width: 900px) {
   h1{
-    font-size: 3em;
+    font-size: 2em;
   }
 
   p{
-    font-size: 1.5em;
+    font-size: 1em;
   }
+
+  nav{
+    flex-direction: column;
+    font-size: 1em;
+    position: relative;
+  }
+
+  .site-title{
+    border-bottom: 1px solid #EEE;
+    border-right: none;
+  }
+
+  .my-name{
+    margin-top: 0px;
+    font-size: 2em;
+  }
+
+  .subtitle{
+    font-size: 2em;
+  }
+
+  .section-title{
+    grid-column: 1 / -1;
+  }
+
+  .section-content{
+    grid-column: 1 / -1;
+    padding: 20px 10px;
+  }
+
+}
+
+@media screen and (max-width: 544px) {
+/* mobile responsiveness */
 }
