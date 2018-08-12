@@ -112,6 +112,14 @@ nav a:hover {
   padding: 20px 0px;
 }
 
+#about-me {
+  padding: 25px 0;
+}
+
+#about-me-content {
+  margin: 25px 0;
+}
+
 .projects {
   background-color: #d1d3d6;
 }
