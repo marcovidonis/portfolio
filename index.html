@@ -21,7 +21,7 @@
     <script>
       $(window).scroll(function() {
         var pagePosition = document.documentElement.scrollTop || document.body.scrollTop;
-        // console.log(pagePosition);
+
         if (pagePosition > 5) {
           showNavbarShadow();
         } else {
@@ -36,20 +36,22 @@
       });
 
       function pageScroll(idTag) {
-        document.querySelector(idTag).scrollIntoView({
-          behavior: 'smooth',
-          block: 'start'
-        });
-        showUpArrow();
+        // document.querySelector(idTag).scrollIntoView({
+        //   behavior: 'smooth',
+        //   block: 'start'
+        // });
+
+        var myElement = document.getElementById(idTag);
+        zenscroll.to(myElement);
       }
 
       function pageScrollToTop() {
-        window.scroll({
-          top: 0,
-          left: 0,
-          behavior: 'smooth'
-        });
-        hideUpArrow();
+        // window.scroll({
+        //   top: 0,
+        //   left: 0,
+        //   behavior: 'smooth'
+        // });
+        zenscroll.toY(0);
       }
 
       function showNavbarShadow() {
@@ -84,9 +86,9 @@
 
     <nav id="top-nav">
       <!-- <div class="site-title">MARCO VIDONIS</div> -->
-      <a href="javascript:pageScroll('#about-me')">About Me</a>
-      <a href="javascript:pageScroll('#my-projects')">Projects</a>
-      <a href="javascript:pageScroll('#my-tools')">Tools</a>
+      <a href="javascript:pageScroll('about-me')">About Me</a>
+      <a href="javascript:pageScroll('my-projects')">Projects</a>
+      <a href="javascript:pageScroll('my-tools')">Tools</a>
     </nav>
 
     <div class="my-grid-container">
@@ -203,6 +205,10 @@
     </footer>
 
     <a id="arrow-up" href="javascript:pageScrollToTop()"><i class="fas fa-angle-up"></i></a>
+
+    <script src="zenscroll-min.js"></script>
+
+
   </body>
 
 
