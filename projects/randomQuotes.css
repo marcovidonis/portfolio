@@ -12,6 +12,18 @@ body{
   margin-bottom: 50px;
 }
 
+header {
+  font-size: 22px;
+  margin: 20px 50px 20px 50px;
+  border-bottom: #333 solid 1px;
+}
+
+header a {
+  color: #333;
+  text-decoration: none;
+  line-height: 50px;
+}
+
 h1{
   font-size: 3em;
   text-align: center;
