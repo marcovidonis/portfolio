@@ -208,7 +208,6 @@ nav a:hover {
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
   grid-gap: 1px;
   padding: 0;
-  margin-bottom: 50px;
 }
 
 .tools i {
@@ -341,6 +340,7 @@ footer a {
 
   .tools {
     padding: 0;
+    margin-bottom: 50px;
   }
 
   #arrow-up {

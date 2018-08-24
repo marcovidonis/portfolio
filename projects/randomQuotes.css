@@ -16,6 +16,8 @@ header {
   font-size: 22px;
   margin: 20px 50px 20px 50px;
   border-bottom: #333 solid 1px;
+  display: flex;
+  justify-content: space-between;
 }
 
 header a {
@@ -46,14 +48,13 @@ section a {
 }
 
 section {
-  margin-top: 50px;
+  margin-top: 20px;
   padding: 10px 150px;
 }
 
 .links {
   display: flex;
-  flex-direction: row;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .links a {
@@ -61,8 +62,7 @@ section {
 }
 
 .links p {
-  width: 100%;
-
+  color: #b50003;
 }
 
 footer {
@@ -116,6 +116,11 @@ footer a {
 
   p{
     font-size: 16px;
+  }
+
+  header {
+    font-size: 16px;
+    margin: 10px 20px 20px 20px;
   }
 
   section a {
