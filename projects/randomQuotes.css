@@ -41,6 +41,31 @@ p{
   font-size: 22px;
 }
 
+.dropdown {
+  background-color: #EEE;
+  /* border: 2px solid #d1d3d6; */
+  border-radius: 2px;
+  position: absolute;
+  top: 50px;
+  right: 40px;
+  font-size: 22px;
+  line-height: 48px;
+  box-shadow: 6px 6px 10px #666;
+  /* filter: drop-shadow(13px 13px 10px #333); */
+}
+
+.dropdown a {
+  text-decoration: none;
+  color: #333;
+}
+
+.dropdown ul {
+  list-style: none;
+  padding: 0 15px;
+  margin: 0;
+
+}
+
 section a {
   font-size: 22px;
   color: #b50003;
