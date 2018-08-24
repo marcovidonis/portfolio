@@ -13,6 +13,38 @@
 
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        $(document).click(function(event) {
+          console.log($(event.target).closest('#dropdown'))
+          if(!$(event.target).closest('#dropdown, #projectsButton').length) {
+              // if($('#dropdown').is(":visible")) {
+              //     $('#dropdown').hide();
+              // }
+              // console.log("made it here");
+              $("#dropdown").css("opacity", 0);
+          }
+        });
+
+        $("#projectsButton").on("click",function() {
+          // console.log($("#dropdown").css("opacity"))
+          if($("#dropdown").css("opacity")==0) {
+            // console.log("it's true");
+            $("#dropdown").css("opacity", 1);
+          } else {
+            $("#dropdown").css("opacity", 0);
+          }
+
+          // $("#dropdown").fadeIn();
+          // $("#dropdown").css("bottom", "100px");
+        });
+      });
+
+    </script>
+
     <style>
     </style>
 
@@ -23,14 +55,14 @@
   <body>
     <header>
       <a href="https://www.marcovidonis.com"><i class="fas fa-home"></i>&nbsp Home</a>
-      <a href=""><i class="fas fa-sort-down"></i>&nbsp Projects</a>
+      <a id="projectsButton"><i class="fas fa-sort-down"></i>&nbsp Projects</a>
     </header>
 
-    <div class="dropdown">
+    <div id="dropdown">
       <ul>
         <li><a href="">Portfolio</a></li>
         <li><a href="">PunkRock Wedding</a></li>
-        <li><a href="">Random Quotes Viewer</a></li>
+        <li><a href="projects/randomQuotes">Random Quotes Viewer</a></li>
         <li><a href="">Tribute Page</a></li>
       </ul>
     </div>

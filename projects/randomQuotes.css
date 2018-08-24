@@ -40,10 +40,12 @@ img {
 p{
   font-size: 22px;
 }
+#projectsButton:hover {
+  cursor: pointer;
+}
 
-.dropdown {
+#dropdown {
   background-color: #EEE;
-  /* border: 2px solid #d1d3d6; */
   border-radius: 2px;
   position: absolute;
   top: 50px;
@@ -51,19 +53,29 @@ p{
   font-size: 22px;
   line-height: 48px;
   box-shadow: 6px 6px 10px #666;
-  /* filter: drop-shadow(13px 13px 10px #333); */
+  opacity: 0;
+  transition: opacity 1s;
 }
 
-.dropdown a {
+#dropdown a {
   text-decoration: none;
   color: #333;
 }
 
-.dropdown ul {
+#dropdown ul {
   list-style: none;
-  padding: 0 15px;
+  padding: 0;
   margin: 0;
 
+}
+
+#dropdown li {
+  padding: 0 15px;
+  border-radius: 2px;
+}
+
+#dropdown li:hover {
+  background-color: #CCC;
 }
 
 section a {
