@@ -19,27 +19,20 @@
       $(document).ready(function(){
 
         $(document).click(function(event) {
-          console.log($(event.target).closest('#dropdown'))
           if(!$(event.target).closest('#dropdown, #projectsButton').length) {
-              // if($('#dropdown').is(":visible")) {
-              //     $('#dropdown').hide();
-              // }
-              // console.log("made it here");
               $("#dropdown").css("opacity", 0);
+              $("#dropdown").css("height", "20px");
           }
         });
 
         $("#projectsButton").on("click",function() {
-          // console.log($("#dropdown").css("opacity"))
           if($("#dropdown").css("opacity")==0) {
-            // console.log("it's true");
             $("#dropdown").css("opacity", 1);
+            $("#dropdown").css("height", "192px");
           } else {
             $("#dropdown").css("opacity", 0);
+            $("#dropdown").css("height", "20px");
           }
-
-          // $("#dropdown").fadeIn();
-          // $("#dropdown").css("bottom", "100px");
         });
       });
 

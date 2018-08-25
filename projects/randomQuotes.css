@@ -50,11 +50,13 @@ p{
   position: absolute;
   top: 50px;
   right: 40px;
+  height: 20px;
   font-size: 22px;
   line-height: 48px;
   box-shadow: 6px 6px 10px #666;
+  overflow: hidden;
   opacity: 0;
-  transition: opacity 1s;
+  transition: opacity 0.4s, height 0.8s;
 }
 
 #dropdown a {
@@ -75,7 +77,12 @@ p{
 }
 
 #dropdown li:hover {
-  background-color: #CCC;
+  background-color: #DeDeDe;
+  color: #b50003;
+}
+
+#dropdown li:hover a {
+  color: #b50003;
 }
 
 section a {
@@ -169,6 +176,14 @@ footer a {
     height: 100%;
     width: 95%;
     margin: 20px auto;
+  }
+
+  #dropdown {
+    top: 50px;
+    right: 10px;
+    height: 20px;
+    font-size: 16px;
+    line-height: 48px;
   }
 
   section {
