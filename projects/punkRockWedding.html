@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="Marco Vidonis - Projects - Punk Rock Wedding" />
+    <meta property="og:description" content="Behind the scenes of my most recent projects. Here we take a look at the Punk Rock Wedding website." />
+
+    <title>Projects: Punk Rock Wedding</title>
+
+    <link rel="stylesheet" href="punkRockWedding.css">
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script>
+      $(document).ready(function(){
+
+        $(document).click(function(event) {
+          if(!$(event.target).closest('#dropdown, #projectsButton').length) {
+              $("#dropdown").css("opacity", 0);
+              $("#dropdown").css("height", "20px");
+          }
+        });
+
+        $("#projectsButton").on("click",function() {
+          if($("#dropdown").css("opacity")==0) {
+            $("#dropdown").css("opacity", 1);
+            $("#dropdown").css("height", "192px");
+          } else {
+            $("#dropdown").css("opacity", 0);
+            $("#dropdown").css("height", "20px");
+          }
+        });
+      });
+
+    </script>
+
+    <style>
+    </style>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  </head>
+
+  <body>
+    <header>
+      <a href="https://www.marcovidonis.com"><i class="fas fa-home"></i>&nbsp Home</a>
+      <a id="projectsButton"><i class="fas fa-sort-down"></i>&nbsp Projects</a>
+    </header>
+
+    <div id="dropdown">
+      <ul>
+        <li><a href="">Portfolio</a></li>
+        <li><a href="punkRockWedding">Punk Rock Wedding</a></li>
+        <li><a href="randomQuotes">Random Quotes Viewer</a></li>
+        <li><a href="">Tribute Page</a></li>
+      </ul>
+    </div>
+
+    <div class="container">
+      <h1>Punk Rock Wedding</h1>
+
+      <img src="../img/prw_small.jpg" >
+
+      <section class="links">
+        <p><a href="https://punkrockwedding.github.io/tourdates/" target="_blank">See the website</a> <i class="fas fa-globe-africa"></i></p>
+        <p><a href="https://github.com/marcovidonis/tourdates" target="_blank">See the GitHub repo</a> <i class="fab fa-github"></i></p>
+      </section>
+
+      <section>
+        <p>June 2018</p>
+        <p>This project is particularly dear to me, as it's the website I made for my sister's wedding. The main page lists their honeymoon destinations: Each place has a card showing a picture and a brief description on mouse hover.</p>
+        <p>The Instagram page is a web scraper that shows the user a live feed of all the pictures posted on Instagram with the wedding's hashtag, #GinZano2018.</p>
+        <p>The idea behing the project was that all guests during the day could contribute to the site by tagging their photos on Instagram, and see the photobook of the day take shape in real time!</p>
+        <br>
+        <p>The tools I used are: CSS Grid, AJAX, jQuery, Google Analytics.</p>
+      </section>
+
+    </div>
+
+    <footer>Made by Marco Vidonis, 2018
+      <ul>
+        <li><a href="https://www.marcovidonis.com" target="_none">www.marcovidonis.com</a></li>
+        <li><a href="https://github.com/marcovidonis" target="_none">GitHub</a> &nbsp &nbsp<i class="fab fa-github"></i></li>
+        <li><a href="https://twitter.com/marcovidonis" target="_none">Twitter</a> &nbsp &nbsp<i class="fab fa-twitter"></i></li>
+        <li><a href="https://www.freecodecamp.org/marcovidonis" target="_none">freeCodeCamp</a> &nbsp &nbsp<i class="fab fa-free-code-camp"></i></li>
+      </ul>
+    </footer>
+
+  </body>
+</html>
