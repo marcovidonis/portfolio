@@ -78,7 +78,7 @@ nav a:hover {
   font-size: 18px;
   text-align: center;
   padding: 15px 15px 25px 15px;
-  transition: opacity 0.8s;
+  transition: opacity 0.8s, visibility 0.8s;
 }
 
 .cookie-notice p {
