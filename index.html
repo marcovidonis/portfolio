@@ -19,6 +19,15 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
     <script>
+      $(document).ready(function(){
+        $(".cookie-notice").addClass("pop-up");
+        $("#cn-ok").on("click", function () {
+          $(".cookie-notice").removeClass("pop-up");
+          $(".cookie-notice").css("opacity", 0);
+        });
+      });
+
+
       $(window).scroll(function() {
         var pagePosition = document.documentElement.scrollTop || document.body.scrollTop;
 
@@ -103,6 +112,15 @@
       <a href="javascript:pageScroll('my-projects')">Projects</a>
       <a href="javascript:pageScroll('my-tools')">Tools</a>
     </nav>
+
+    <div class="cookie-notice">
+      <span>
+        <p>Smile! Cookies help me track this website's performance, so I can keep making it better.</p>
+        <p>If you continue using this site, I'll assume you're OK with it.</p>
+        <br>
+      </span>
+      <a id="cn-ok">I'm OK with it</a>
+    </div>
 
     <div class="my-grid-container">
       <div class="my-name"><h1>Hi, I'm Marco!</h1></div>

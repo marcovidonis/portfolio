@@ -64,6 +64,47 @@ nav a:hover {
   color: #333;
 }
 
+.cookie-notice {
+  position: fixed;
+  top: 65%;
+  left: 240px;
+  right: 240px;
+  z-index: 3;
+  background-color: #fff;
+  color: #333;
+  box-shadow: 10px 10px 15px #444;
+  opacity: 0;
+  border-radius: 5px;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 15px 25px 15px;
+  transition: opacity 0.8s;
+}
+
+.cookie-notice p {
+    font-size: 18px;
+}
+
+.cookie-notice a {
+  text-decoration: none;
+  color: #333;
+  border-radius: 35px;
+  border: 1px solid #333;
+  padding: 8px 12px;
+  transition: background-color 0.5s;
+}
+
+.cookie-notice a:hover {
+  background-color: #333;
+  color: #fff;
+  cursor: pointer;
+}
+
+.pop-up {
+  opacity: 0.95;
+  transition: opacity 0.5s 2s;
+}
+
 .site-title{
   border-right: 1px solid #EEE;
   border-bottom: none;
@@ -316,6 +357,13 @@ footer a {
     font-size: 65px;
   }
 
+  .cookie-notice {
+    top: 35%;
+    left: 60px;
+    right: 60px;
+    font-size: 16px;
+  }
+
   .subtitle{
     width: 250px;
     font-size: 36px;
@@ -355,6 +403,15 @@ footer a {
     flex-direction: column;
     font-size: 1em;
     position: relative;
+  }
+
+  .cookie-notice {
+    left: 30px;
+    right: 30px;
+  }
+
+  .cookie-notice p {
+    font-size: 16px;
   }
 
   .main-image img {
