@@ -188,27 +188,35 @@ nav a:hover {
 }
 
 .thumbnail {
-  height: 300px;
-  width: 100%;
-  object-fit: cover;
+  height: 250px;
+  width: 95%;
+  object-fit: scale-down;
   opacity: 1;
   transition: opacity 0.6s;
-  border-radius: 2px;
+  border-radius: 5px;
 }
 
 .card {
   position: relative;
-  border-radius: 2px;
+  border-radius: 5px;
+  background-color: #EfEfEf;
+  box-shadow: 3px 3px 10px #555;
+}
+
+.card:hover {
+  background-color: #FFF;
+  box-shadow: 0 0 0;
+  transition: background-color 0.2s, box-shadow 0.2s;
 }
 
 .card-description {
   position: absolute;
   align-self: end;
   text-align: center;
-  background: rgba(255, 255, 255, 0.9);
+  background: #EEE;
   color: #333;
   width: 100%;
-  border-radius: 0 0 2px 2px;
+  border-radius: 0 0 5px 5px;
   font-size: 1.2em;
   padding-top: 10px;
   padding-bottom: 5px;
