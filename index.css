@@ -14,6 +14,7 @@ h1{
 p{
   font-size: 1.5em;
   font-family: "Alice", serif;
+  margin: 10px;
 }
 
 a {
@@ -43,7 +44,7 @@ button {
 
 .my-grid-container > *{
   display: flex;
-  background-color: #EEE;
+  background-color: #fEfEfE;
   color: #333;
   justify-content: center;
   align-items: center;
@@ -125,15 +126,8 @@ nav button:hover {
   transition: opacity 0.5s 2s;
 }
 
-.site-title{
-  border-right: 1px solid #EEE;
-  border-bottom: none;
-  background-color: #b50003;
-}
-
 .my-name{
   grid-column: 1 / -1;
-  background: none;
   margin-top: 50px;
 }
 
@@ -141,16 +135,6 @@ nav button:hover {
   font-size: 85px;
   margin-top: 30px;
   margin-bottom: 30px;
-}
-
-.main-image{
-  grid-column: 1 / -1;
-  width: 100%;
-  position: relative;
-}
-
-.main-image img {
-  object-fit: cover;
 }
 
 .subtitle{
@@ -171,10 +155,11 @@ nav button:hover {
 .section-content{
   grid-column: 3 / -1;
   padding: 20px;
+  flex-direction: column;
 }
 
 .projects {
-  background-color: #d1d3d6;
+  background-color: #e5e5e5;
 }
 
 .my-projects-title{
@@ -186,7 +171,7 @@ nav button:hover {
   grid-column: 1 / -1;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  background-color: #d1d3d6;
+  background-color: #e5e5e5;
   grid-gap: 50px;
   padding: 50px;
 }
@@ -251,87 +236,6 @@ nav button:hover {
 
 #my-tools {
   background-color: white;
-}
-
-.tools {
-  justify-content: center;
-  align-items: baseline;
-  text-align: center;
-  font-size: 1.5em;
-  line-height: 30px;
-  font-family: sans-serif;
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  grid-gap: 1px;
-  padding: 0;
-}
-
-.tools i {
-  font-size: 90px;
-}
-
-.one-tool {
-  height: 300px;
-  position: relative;
-  background-color: white;
-}
-
-.one-tool > span:first-child {
-  position: absolute;
-  top: 105px;
-  left: 0;
-  right: 0;
-  margin-left: auto;
-  margin-right: auto;
-  transition: top 0.5s 0.1s ease-in-out;
-}
-
-.one-tool span + span {
-  font-size: 20px;
-  opacity: 0;
-  position: absolute;
-  margin: auto;
-  padding: 0 5px;
-  left: 0;
-  right: 0;
-  top: 110px;
-  bottom: 0;
-  transition: opacity 0.2s;
-}
-
-.one-tool:hover span:first-child {
-  top: 10px;
-  transition: top 0.5s ease-in-out;
-}
-.one-tool:hover span + span {
-  opacity: 1;
-  transition: opacity 0.5s 0.2s;
-}
-
-.tools > .html {
-  color: #f78c00;
-}
-
-.tools > .css {
-  color: #008ef4;
-}
-
-.tools > .js {
-  color: #ddd018;
-}
-
-.tools > .analytics {
-  color: #F68511;
-}
-
-.tools > .fontawesome {
-  color: #2B98F3;
-}
-
-.analytics img {
-  height: 80px;
-  width: 80px;
-  object-fit: scale-down;
 }
 
 footer {
