@@ -43,6 +43,7 @@ video {
 
 p{
   font-size: 22px;
+  font-family: serif;
 }
 #projectsButton:hover {
   cursor: pointer;
