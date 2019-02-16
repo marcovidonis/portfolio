@@ -81,11 +81,11 @@ nav a:hover {
   transition: opacity 0.8s, visibility 0.8s;
 }
 
-.cookie-notice p {
+.cookie-notice p, button {
     font-size: 18px;
 }
 
-.cookie-notice a {
+.cookie-notice button {
   text-decoration: none;
   color: #333;
   border-radius: 35px;
@@ -94,7 +94,7 @@ nav a:hover {
   transition: background-color 0.5s;
 }
 
-.cookie-notice a:hover {
+.cookie-notice button:hover {
   background-color: #333;
   color: #fff;
   cursor: pointer;
@@ -418,7 +418,7 @@ footer a {
     right: 30px;
   }
 
-  .cookie-notice p {
+  .cookie-notice p, button {
     font-size: 16px;
   }
 
