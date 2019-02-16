@@ -85,9 +85,10 @@ nav button:hover {
 
 .cookie-notice {
   position: fixed;
-  top: 65%;
-  left: 240px;
-  right: 240px;
+  /* top: 65%; */
+  bottom: 5px;
+  left: 80px;
+  right: 80px;
   z-index: 3;
   background-color: #fff;
   color: #333;
@@ -96,8 +97,14 @@ nav button:hover {
   border-radius: 5px;
   font-size: 18px;
   text-align: center;
-  padding: 15px 15px 25px 15px;
+  padding: 5px;
   transition: opacity 0.8s, visibility 0.8s;
+  display: flex;
+  align-items: center;
+}
+
+.cookie-notice span {
+  flex: 4;
 }
 
 .cookie-notice p, button {
@@ -109,7 +116,10 @@ nav button:hover {
   color: #333;
   border-radius: 35px;
   border: 1px solid #333;
+  margin: 10px;
   padding: 8px 12px;
+  width: 150px;
+  height: 40px;
   transition: background-color 0.5s;
   font-family: "Roboto", sans-serif;
   font-weight: 300;
@@ -238,6 +248,11 @@ nav button:hover {
   background-color: white;
 }
 
+.tools {
+  padding-bottom: 40px;
+  background-color: white;
+}
+
 footer {
   background-color: #333;
   color: #EEE;
@@ -286,10 +301,10 @@ footer a {
   }
 
   .cookie-notice {
-    top: 35%;
-    left: 60px;
-    right: 60px;
+    left: 30px;
+    right: 30px;
     font-size: 16px;
+    flex-direction: column;
   }
 
   .subtitle{
@@ -308,10 +323,9 @@ footer a {
   }
 
   .tools {
-    padding: 0;
-    margin-bottom: 50px;
+    padding-bottom: 20px;
   }
-
+  
   #arrow-up {
 
     font-size: 50px;
@@ -334,8 +348,8 @@ footer a {
   }
 
   .cookie-notice {
-    left: 30px;
-    right: 30px;
+    left: 10px;
+    right: 10px;
   }
 
   .cookie-notice p, button {
