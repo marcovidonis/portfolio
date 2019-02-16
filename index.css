@@ -21,6 +21,15 @@ a {
   text-decoration: inherit;
 }
 
+button {
+  background: none;
+  color: inherit;
+  border: none;
+  font: inherit;
+  cursor: pointer;
+  outline: inherit;
+}
+
 .fcc-link{
   color: green;
   text-decoration: underline;
@@ -46,6 +55,8 @@ nav{
   background-color: #333;
   color: #EEE;
   font-size: 1.5em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   align-items: stretch;
   z-index: 99;
   top: 0;
@@ -62,7 +73,11 @@ nav > * {
   transition: color: 0.5s;
 }
 
-nav a:hover {
+nav button {
+  font: inherit;
+}
+
+nav button:hover {
   background-color: #EEE;
   color: #333;
 }
@@ -95,6 +110,8 @@ nav a:hover {
   border: 1px solid #333;
   padding: 8px 12px;
   transition: background-color 0.5s;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 .cookie-notice button:hover {
@@ -156,14 +173,6 @@ nav a:hover {
   padding: 20px;
 }
 
-#about-me {
-  /* padding: 25px 0; */
-}
-
-#about-me-content {
-  /* margin: 25px 0; */
-}
-
 .projects {
   background-color: #d1d3d6;
 }
@@ -221,6 +230,8 @@ nav a:hover {
   width: 100%;
   border-radius: 0 0 5px 5px;
   font-size: 1.2em;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
   padding-top: 10px;
   padding-bottom: 5px;
   top: 85%;
@@ -331,6 +342,8 @@ footer {
   padding: 15px 10px 50px 40px;
   right: 0;
   left: 0;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
 }
 
 footer ul {

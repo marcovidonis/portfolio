@@ -14,9 +14,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css" integrity="sha384-O8whS3fhG2OnA5Kas0Y9l3cfpmYjapjI0E4theH4iuMD+pLhbf6JI0jIMfYcK3yZ" crossorigin="anonymous">
 
     <!-- GOOGLE FONTS -->
-    <link href="https://fonts.googleapis.com/css?family=Anton|Alice" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Roboto:700,900" rel="stylesheet">
-    <!-- <link href="https://fonts.googleapis.com/css?family=Alice" rel="stylesheet">  -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,900|Alice" rel="stylesheet">
 
     <style>
     </style>
@@ -30,6 +28,15 @@
           $(".cookie-notice").removeClass("pop-up");
           $(".cookie-notice").css("opacity", 0);
           $(".cookie-notice").css("visibility","hidden");
+        });
+        $("#btn-about-me").on("click", function () {
+          pageScroll('about-me');
+        });
+        $("#btn-projects").on("click", function () {
+          pageScroll('my-projects');
+        });
+        $("#btn-tools").on("click", function () {
+          pageScroll('my-tools');
         });
       });
 
@@ -51,21 +58,11 @@
       });
 
       function pageScroll(idTag) {
-        // document.querySelector(idTag).scrollIntoView({
-        //   behavior: 'smooth',
-        //   block: 'start'
-        // });
-
         var myElement = document.getElementById(idTag);
         zenscroll.to(myElement);
       }
 
       function pageScrollToTop() {
-        // window.scroll({
-        //   top: 0,
-        //   left: 0,
-        //   behavior: 'smooth'
-        // });
         zenscroll.toY(0);
       }
 
@@ -113,19 +110,15 @@
   <body>
 
     <nav id="top-nav">
-      <!-- <div class="site-title">MARCO VIDONIS</div> -->
-      <a href="javascript:pageScroll('about-me')">About Me</a>
-      <a href="javascript:pageScroll('my-projects')">Projects</a>
-      <a href="javascript:pageScroll('my-tools')">Tools</a>
+      <button id="btn-about-me">About Me</button>
+      <button id="btn-projects">Projects</button>
+      <button id="btn-tools">Tools</button>
     </nav>
 
 
     <div class="my-grid-container">
       <div class="my-name"><h1>Hi, I'm Marco!</h1></div>
-      <div class="main-image">
-        <!-- <img class="main-image" src="img/marco_wide_small.jpg"> -->
-        <!-- <div class="subtitle">Front-End Web Developer</div> -->
-      </div>
+
       <div class="section-title" id="about-me"><h1>About Me</h1></div>
       <div class="section-content" id="about-me-content">
         <p>I'm a Front-End Web Developer with a passion for UI/UX Design. I craft web pages such as portfolios and landing pages to create curated user experiences, both on desktop and mobile.</p>
@@ -137,7 +130,7 @@
           src="img/softstonelogo.png"
           alt="The Soft Stone Mosaic logo.">
           <span class="card-description">
-            The Soft Stone Mosaic
+            Mosaics business site
           </span>
         </a>
 
@@ -146,7 +139,7 @@
           src="img/portfolio_small.jpg"
           alt="Screenshot of my Portfolio website.">
           <span class="card-description">
-            Portfolio Website
+            My own Portfolio!
           </span>
         </a>
 
@@ -158,23 +151,6 @@
             Wedding page with Instagram viewer
           </span>
         </a>
-
-        <!-- <a class="card" href="projects/randomQuotes">
-          <img class="thumbnail"
-          src="img/random_quotes_small.jpg"
-          alt="Screenshot of my Random Quotes Viewer page.">
-          <span class="card-description">
-            Random Famous Quotes Viewer
-          </span>
-        </a>
-        <a class="card" href="projects/tributePage">
-          <img class="thumbnail"
-          src="img/tribute_page_small.jpg"
-          alt="David Foster Wallace Tribute Page.">
-          <span class="card-description">
-            David Foster Wallace Tribute Page
-          </span>
-        </a> -->
 
       </div>
 
